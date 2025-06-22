@@ -778,4 +778,24 @@ header {
 
 
 
+/* Media query para pantallas medianas (e.g. hasta 1024px): apilar en columna */
+@media (max-width: 1024px) {
+  .seccion-nosotros {            /* Ajustar al nombre real del contenedor flex */
+    flex-direction: column;      /* Apilar elementos verticalmente */
+    align-items: center;         /* Centrar horizontalmente (opcional) */
+  }
+  .seccion-nosotros .col-imagen,
+  .seccion-nosotros .col-texto {
+    width: 100%;                 /* Cada columna ocupa todo el ancho */
+    margin: 10px 0;              /* Separación vertical entre elementos */
+  }
+  .seccion-nosotros img {
+    max-width: 100%;             /* Imagen nunca más ancha que su contenedor */
+    height: auto;                /* Mantener proporción de imagen */
+    display: block;              /* Asegura que la imagen se muestre (sobrescribe display previo) */
+    margin: 0 auto;              /* Centra la imagen dentro de su columna */
+  }
+}
+
+
 
