@@ -14,13 +14,12 @@ body {
 }
 
 section {
-  scroll-margin-top: 150px; /* Ajusta según el alto de tu navbar */
+  scroll-margin-top: 150px;
   width: 100%;
   overflow-x: hidden;
   margin: 2px;
   padding: 2px;
 }
-
 
 /* NAVBAR */
 header {
@@ -73,7 +72,6 @@ header {
   gap: 20px;
 }
 
-
 .nav-links li a {
   text-decoration: none;
   color: #2d2d2d;
@@ -98,7 +96,7 @@ header {
   margin: 4px;
   border-radius: 3px;
 }
-/* Por defecto oculto en pantallas pequeñas */
+
 @media (max-width: 650px) {
   .nav-links {
     display: none;
@@ -109,11 +107,17 @@ header {
     right: 0;
     width: 100%;
     text-align: center;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: all 0.4s ease-in-out;
   }
-
+  
   .nav-links.nav-active {
     display: flex;
+    opacity: 1;
+    transform: translateY(0);
   }
+  
 
   .burger {
     display: flex;
@@ -122,8 +126,6 @@ header {
     display: none !important;
   }
 }
-
-
 
 /* SLIDER */
 .slider-container {
@@ -241,7 +243,7 @@ header {
 
 .nosotros-texto {
   width: 50%;
-  height: 100%;
+  height: auto;
   text-align: center;
   padding: 0 20px;
   display: flex;
@@ -249,21 +251,49 @@ header {
   justify-content: center;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 1100px) {
   .nosotros-fila {
     flex-direction: column;
     height: auto;
+    max-height: none;
   }
 
   .nosotros-img {
     display: none;
+    width: 100%;
+    height: 400px;
+    padding: 0;
+    margin: 0;
+  }
+
+  .nosotros-img img {
+    width: 100%;
+    height: auto !;
+    object-fit: contain !important; /* Asegura que no se recorte */
+    display: block;
   }
 
   .nosotros-texto {
     width: 100%;
-    padding: 10px 0;
+    height: auto;
+    padding: 10px;
+    font-size: 1rem;
   }
 }
+
+.animate-scale-left,
+.animate-scale-right {
+  opacity: 0;
+  transform: translateX(-80px) scale(0.8);
+  transition: all 1.2s cubic-bezier(0.25, 1, 0.5, 1); /* ← aquí el cambio */
+}
+
+.animate-scale-left.show,
+.animate-scale-right.show {
+  opacity: 1;
+  transform: translateX(0) scale(1);
+}
+
 
 /* CARRUSEL NOTICIAS */
 .carousel-container {
@@ -290,11 +320,20 @@ header {
   height: 100%;
   background: white;
   text-align: center;
-  border-radius: 10px;
+  border-radius: 12px;
   overflow: hidden;
   cursor: pointer;
   box-sizing: border-box;
+  border: 1px solid #ddd; /* Borde sutil */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+.carousel-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Sombra más marcada al hacer hover */
+}
+
 
 .carousel-item img {
   width: calc(100% - 4px);
@@ -776,26 +815,108 @@ header {
   }
 }
 
-
-
-/* Media query para pantallas medianas (e.g. hasta 1024px): apilar en columna */
-@media (max-width: 1024px) {
-  .seccion-nosotros {            /* Ajustar al nombre real del contenedor flex */
-    flex-direction: column;      /* Apilar elementos verticalmente */
-    align-items: center;         /* Centrar horizontalmente (opcional) */
-  }
-  .seccion-nosotros .col-imagen,
-  .seccion-nosotros .col-texto {
-    width: 100%;                 /* Cada columna ocupa todo el ancho */
-    margin: 10px 0;              /* Separación vertical entre elementos */
-  }
-  .seccion-nosotros img {
-    max-width: 100%;             /* Imagen nunca más ancha que su contenedor */
-    height: auto;                /* Mantener proporción de imagen */
-    display: block;              /* Asegura que la imagen se muestre (sobrescribe display previo) */
-    margin: 0 auto;              /* Centra la imagen dentro de su columna */
-  }
+/*------------------ANIMACIONES--------------------*/
+/* Animación base de entrada */
+.animate {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease-out;
 }
 
+.animate.show {
+  opacity: 1;
+  transform: translateY(0);
+}
 
+/* Animación desde la izquierda */
+.animate-left {
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: all 0.8s ease-out;
+}
 
+.animate-left.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Animación desde la derecha */
+.animate-right {
+  opacity: 0;
+  transform: translateX(40px);
+  transition: all 0.8s ease-out;
+}
+
+.animate-right.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Efecto de escala y desplazamiento lateral */
+.animate-scale-left {
+  opacity: 0;
+  transform: translateX(-50px) scale(0.55);
+  transition: all 0.8s ease-out;
+}
+
+.animate-scale-left.show {
+  opacity: 1;
+  transform: translateX(0) scale(1);
+}
+
+.animate-scale-right {
+  opacity: 0;
+  transform: translateX(50px) scale(0.55);
+  transition: all 0.8s ease-out;
+}
+
+.animate-scale-right.show {
+  opacity: 1;
+  transform: translateX(0) scale(1);
+}
+
+.burger {
+  width: 30px;
+  height: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.burger span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background: #333;
+  border-radius: 3px;
+  transition: all 0.4s ease-in-out;
+}
+
+/* Animación a "X" */
+.burger.toggle span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.burger.toggle span:nth-child(2) {
+  opacity: 0;
+}
+
+.burger.toggle span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* Ocultar burger cuando el menú esté activo */
+.nav-links.nav-active ~ .burger {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Mostrar burger por defecto */
+.burger {
+  opacity: 1;
+  pointer-events: auto;
+  transition: opacity 0.3s ease-in-out;
+}
