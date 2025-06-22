@@ -1,26 +1,42 @@
-// Burger menu toggle
 document.addEventListener('DOMContentLoaded', () => {
+  // --- MENU BURGER ---
   const burger = document.getElementById('burger');
-const navLinks = document.getElementById('nav-links');
-const navLinksList = document.querySelectorAll('#nav-links a');
+  const navLinks = document.getElementById('nav-links');
+  const navLinksList = document.querySelectorAll('#nav-links a');
 
-// Mostrar / ocultar menú con burger
-burger.addEventListener('click', () => {
-  burger.classList.toggle('toggle');
-  navLinks.classList.toggle('nav-active');
-});
-
-// Cerrar menú al hacer clic en un enlace (solo en móvil)
-navLinksList.forEach(link => {
-  link.addEventListener('click', () => {
-    if (window.innerWidth <= 768) {
-      navLinks.classList.remove('nav-active');
-      burger.classList.remove('toggle');
-    }
+  burger.addEventListener('click', () => {
+    burger.classList.toggle('toggle');
+    navLinks.classList.toggle('nav-active');
   });
+
+  navLinksList.forEach(link => {
+    link.addEventListener('click', () => {
+      if (window.innerWidth <= 768) {
+        navLinks.classList.remove('nav-active');
+        burger.classList.remove('toggle');
+      }
+    });
+  });
+
+  // --- ANIMACIONES DE SCROLL ---
+  const animables = document.querySelectorAll('.animate, .animate-left, .animate-right, .animate-scale-left, .animate-scale-right');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+      } else {
+        entry.target.classList.remove('show'); // ← esto permite que la animación se reinicie
+      }
+      
+    });
+  }, {
+    threshold: 0.1
+  });
+
+  animables.forEach(el => observer.observe(el));
 });
 
-});
 
 
 // Slider automático
