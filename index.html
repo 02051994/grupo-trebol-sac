@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Grupo Trébol</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Menú de navegación -->
+  <header class="header">
+    <nav class="navbar">
+      <div class="logo-wrapper">
+        <div class="logo-container anim-scroll">
+          <img src="/img/logo_svg_trebol_2.jpeg" alt="Logo" class="logo-img" />
+          <div class="logo-text">Grupo Trébol</div>
+        </div>
+      </div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#" data-section="inicio">Inicio</a></li>
+        <li><a href="#" data-section="nosotros">Nosotros</a></li>
+        <li><a href="#" data-section="noticias">Galeria</a></li>
+        <li><a href="#" data-section="variedades">Variedades</a></li>
+        <li><a href="#" data-section="productos">Productos</a></li>
+        <li><a href="#" data-section="contacto">Contacto</a></li>
+      </ul>
+      <div class="burger" id="burger">
+        <span></span><span></span><span></span>
+      </div>
+    </nav>
+  </header>
+
+
+  <!-- Sección de Portada con Slider -->
+  <section id="inicio" class="slider-container">
+    <div class="slider" id="slider">
+      <div class="slide active">
+        <img src="img/lidu_16.jpeg" alt="Imagen 1" />
+        <h1 class="texto-animado" id="texto-dinamico">Bienvenidos a Grupo Trebol</h1>
+      </div>
+      <div class="slide">
+        <img src="img/lidu_21.jpeg" alt="Imagen 2" />
+        <h1 class="texto-animado">Comprometidos con la calidad</h1>
+      </div>
+      <div class="slide">
+        <img src="img/lidu_17.jpeg" alt="Imagen 3" />
+        <h1 class="texto-animado">Protegemos el medio ambiente</h1>
+      </div>
+      <button class="btn-conocenos" onclick="document.getElementById('nosotros').scrollIntoView({ behavior: 'smooth' })">Conócenos</button>
+    </div>
+  </section>
+
+  <!-- Sección Nosotros -->
+  <!-- Sección Nosotros -->
+<section id="nosotros" class="nosotros-section">
+  
+  <div class="video-container">
+    <video
+      autoplay
+      muted
+      loop
+      playsinline
+    >
+      <source src="img/lidu_19.mp4" type="video/mp4">
+      Tu navegador no soporta la etiqueta de video.
+    </video>
+    <div class="video-overlay"></div>
+  </div>
+
+    <div class="nosotros-fila">
+    <div class="contenedor-texto">
+      <h2 class="titulo-texto">Historia
+      </h2>
+      <p class="parrafo-texto">En Grupo Trébol, cultivamos con pasión y precisión los mejores arándanos del Perú. Nuestra historia comenzó en el año 2020, en Huaral, una tierra fértil y estratégica que nos permitió dar nuestros primeros pasos con una visión clara: producir fruta de calidad excepcional, aplicando ciencia, tecnología y experiencia en cada etapa del cultivo.
+          Actualmente contamos con 26 hectáreas sembradas de arándanos, con variedades seleccionadas por su alta productividad y calidad: Colossus, Albus, Emerald y Biloxi. Pero no nos detenemos ahí. Estamos desarrollando un nuevo proyecto de expansión que nos permitirá ampliar nuestras áreas cultivadas, fortaleciendo aún más nuestra posición en el mercado nacional e internacional.</p>
+    </div>
+    <div class="contenedor-imagen">
+      <img src="img/foto1.jpeg" alt="Imagen 1">
+    </div>
+  </div>
+
+  <div class="nosotros-fila fila-invertida">
+    <div class="contenedor-texto">
+      <h2 class="titulo-texto">Ubicación</h2>
+      <p class="parrafo-texto">Este es el segundo párrafo con contenido de ejemplo para la sección 2.</p>
+    </div>
+    <div class="contenedor-iframe">
+      <iframe 
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62557.16701700804!2d-77.1254632529098!3d-11.492693890435731!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9106675643f5e15d%3A0xb23a32483aad58ee!2sFundo%20Grupo%20Tr%C3%A9bol!5e0!3m2!1ses!2spe!4v1752520784457!5m2!1ses!2spe" 
+    width="100%" 
+    height="450" 
+    style="border:0;" 
+    allowfullscreen="" 
+    loading="lazy" 
+    referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
+    </div>
+  </div>
+
+  <div class="nosotros-fila">
+    <div class="contenedor-texto">
+      <h2 class="titulo-texto">Dominas el arte del Cultivo</h2>
+      <p class="parrafo-texto">Este es el tercer párrafo con contenido de ejemplo para la sección 3.</p>
+    </div>
+    <div class="contenedor-imagen">
+      <img src="img/foto4.jpeg" alt="Imagen 3">
+    </div>
+  </div>
+
+  <div class="nosotros-fila fila-invertida">
+    <div class="contenedor-texto">
+      <h2 class="titulo-texto">Valores</h2>
+      <p class="parrafo-texto">Este es el cuarto párrafo con contenido de ejemplo para la sección 4.</p>
+    </div>
+    <div class="contenedor-imagen">
+      <img src="img/foto5.jpeg" alt="Imagen 4">
+    </div>
+  </div>
+
+  <div class="nosotros-fila">
+    <div class="contenedor-texto">
+      <h2 class="titulo-texto">Destinos</h2>
+      <p class="parrafo-texto">Este es el quinto párrafo con contenido de ejemplo para la sección 5.</p>
+    </div>
+    <div class="contenedor-imagen">
+      <img src="img/foto6.jpeg" alt="Imagen 5">
+    </div>
+  </div>
+
+  <div class="nosotros-fila fila-invertida">
+    <div class="contenedor-texto">
+      <h2 class="titulo-texto">Título 6</h2>
+      <p class="parrafo-texto">Este es el sexto párrafo con contenido de ejemplo para la sección 6.</p>
+    </div>
+    <div class="contenedor-imagen">
+      <img src="img/foto7.jpeg" alt="Imagen 6">
+    </div>
+  </div>
+</section>
+
+
+  <!-- Sección Noticias -->
+  <!-- Noticias -->
+<section id="noticias" class="noticias-section">
+  <div class="noticia-container-img anim-scale">
+    <img src="img/background_imagen.png" alt="Noticia destacada" />
+  </div>
+
+  <h1>Noticias</h1>
+
+  <div class="carousel-container">
+    <button class="carousel-btn prev">❮</button>
+    <div class="carousel-track">
+      <div class="carousel-item" data-img="img/foto1.jpeg" data-desc="Texto 1">
+        <img src="img/foto1.jpeg" alt="" />
+        <p>Noticia 1</p>
+      </div>
+      <div class="carousel-item" data-img="img/foto2.jpeg" data-desc="Texto 2">
+        <img src="img/foto2.jpeg" alt="" />
+        <p>Noticia 2</p>
+      </div>
+      <div class="carousel-item" data-img="img/foto3.jpeg" data-desc="Texto 3">
+        <img src="img/foto3.jpeg" alt="" />
+        <p>Noticia 3</p>
+      </div>
+      <div class="carousel-item" data-img="img/foto1.jpeg" data-desc="Texto 4">
+        <img src="img/foto1.jpeg" alt="" />
+        <p>Noticia 4</p>
+      </div>
+      <div class="carousel-item" data-img="img/foto3.jpeg" data-desc="Texto 5">
+        <img src="img/foto3.jpeg" alt="" />
+        <p>Noticia 5</p>
+      </div>
+    </div>
+    <button class="carousel-btn next">❯</button>
+  </div>
+
+  <div class="carousel-container">
+    <button class="carousel-btn prev">❮</button>
+    <div class="carousel-track">
+      <div class="carousel-item" data-img="img/foto1.jpeg" data-desc="Texto 1">
+        <img src="img/foto1.jpeg" alt="" />
+        <p>Noticia 1</p>
+      </div>
+      <div class="carousel-item" data-img="img/foto2.jpeg" data-desc="Texto 2">
+        <img src="img/foto2.jpeg" alt="" />
+        <p>Noticia 2</p>
+      </div>
+      <div class="carousel-item" data-img="img/foto3.jpeg" data-desc="Texto 3">
+        <img src="img/foto3.jpeg" alt="" />
+        <p>Noticia 3</p>
+      </div>
+      <div class="carousel-item" data-img="img/foto1.jpeg" data-desc="Texto 4">
+        <img src="img/foto1.jpeg" alt="" />
+        <p>Noticia 4</p>
+      </div>
+      <div class="carousel-item" data-img="img/foto3.jpeg" data-desc="Texto 5">
+        <img src="img/foto3.jpeg" alt="" />
+        <p>Noticia 5</p>
+      </div>
+    </div>
+    <button class="carousel-btn next">❯</button>
+  </div>
+
+  <div id="modal-noticia" class="modal-noticia">
+    <div class="modal-contenido">
+      <button id="cerrar-modal">&times;</button>
+      <img id="modal-img" src="" alt="Imagen noticia" />
+      <div class="modal-descripcion" id="modal-desc">Descripcion</div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Sección Variedades -->
+  <!-- Acerca de -->
+<section id="variedades" class="section acerca-section">
+  <h1>Variedades</h1>
+
+  <div class="fila-acerca anim-scroll">
+    <img src="img/foto1.jpeg" alt="" class="animate-left animate-scale-left" />
+    <div class="text animate-right">
+      <strong>Colossus</strong><br><br>
+      Es una variedad de arándano Southern Highbush desarrollada por la Universidad de Florida, ideal para quienes buscan entrar temprano al mercado con fruta de gran tamaño, excepcional firmeza y altísima productividad. Su planta es vigorosa, con cosechas muy tempranas que se destacan por la consistencia del calibre y un sabor agradable, equilibrado entre dulzura y acidez.
+    </div>
+    <img src="img/foto2.jpeg" alt="" class="animate-left animate-scale-left" />
+  </div>
+
+  <div class="fila-acerca anim-scroll">
+    <img src="img/foto1.jpeg" alt="" class="animate-left animate-scale-left" />
+    <div class="text animate-right">
+      <strong>Albus</strong><br><br>
+      Es una variedad pensada para zonas templadas o de mayor acumulación de frío. Produce fruta grande, de excelente firmeza y sabor superior, con un aroma que la distingue frente a otras variedades. Su comportamiento en campo es equilibrado, con buena sanidad natural.
+    </div>
+    <img src="img/foto2.jpeg" alt="" class="animate-left animate-scale-left" />
+  </div>
+
+  <div class="fila-acerca anim-scroll">
+    <img src="img/foto1.jpeg" alt="" class="animate-left animate-scale-left" />
+    <div class="text animate-right">
+      <strong>Emerald</strong><br><br>
+      Emerald combina grandeza en el fruto, sabor destacado y una planta fuerte y vigorosa. Perfecta para climas cálidos, esta variedad es una aliada ideal cuando se busca productividad y calidad en un solo paquete.
+    </div>
+    <img src="img/foto2.jpeg" alt="" class="animate-left animate-scale-left" />
+  </div>
+
+  <div class="fila-acerca anim-scroll">
+    <img src="img/foto1.jpeg" alt="" class="animate-left animate-scale-left" />
+    <div class="text animate-right">
+      <strong>Biloxi</strong><br><br>
+      Es una variedad confiable, ampliamente adaptada a zonas cálidas y de baja acumulación de frío. Produce fruta de buen tamaño, sabor suave y agradable, y es una de las más utilizadas por su capacidad de adaptarse a diversos climas tropicales y subtropicales.
+    </div>
+    <img src="img/foto2.jpeg" alt="" class="animate-left animate-scale-left" />
+  </div>
+</section>
+
+
+  <!-- Sección Productos -->
+  <!-- Productos -->
+<section id="productos" class="section productos-section">
+  <h1>Productos</h1>
+
+  <div class="fila-productos anim-scroll">
+    <div class="text animate-right">
+      Riego tecnificado: adaptado a las condiciones precisas de cada lote y etapa fenológica.  
+      Nutrición vegetal basada en evidencia: con planes ajustados según análisis foliares y del sustrato.  
+      Seguimiento técnico-analítico continuo:  
+      Química del sustrato  
+      Análisis nutricionales  
+      Control fitosanitario  
+      Monitoreo de plagas y enfermedades  
+      Nuestro compromiso  
+      Desde nuestros inicios en 2020, mantenemos firme nuestro propósito: hacer agricultura de precisión.
+    </div>
+    <img src="img/foto1.jpeg" alt="" class="animate-left animate-scale-left" />
+    <div class="text animate-right">
+      Riego tecnificado: adaptado a las condiciones precisas de cada lote y etapa fenológica.  
+      Nutrición vegetal basada en evidencia: con planes ajustados según análisis foliares y del sustrato.  
+      Seguimiento técnico-analítico continuo:  
+      Química del sustrato  
+      Análisis nutricionales  
+      Control fitosanitario  
+      Monitoreo de plagas y enfermedades  
+      Nuestro compromiso  
+      Desde nuestros inicios en 2020, mantenemos firme nuestro propósito: hacer agricultura de precisión.
+    </div>
+  </div>
+
+  <div class="fila-productos anim-scroll">
+    <div class="text animate-right">
+      Riego tecnificado: adaptado a las condiciones precisas de cada lote y etapa fenológica.  
+      Nutrición vegetal basada en evidencia: con planes ajustados según análisis foliares y del sustrato.  
+      Seguimiento técnico-analítico continuo:  
+      Química del sustrato  
+      Análisis nutricionales  
+      Control fitosanitario  
+      Monitoreo de plagas y enfermedades  
+      Nuestro compromiso  
+      Desde nuestros inicios en 2020, mantenemos firme nuestro propósito: hacer agricultura de precisión.
+    </div>
+    <img src="img/foto2.jpeg" alt="" class="animate-left animate-scale-left" />
+    <div class="text animate-right">
+      Riego tecnificado: adaptado a las condiciones precisas de cada lote y etapa fenológica.  
+      Nutrición vegetal basada en evidencia: con planes ajustados según análisis foliares y del sustrato.  
+      Seguimiento técnico-analítico continuo:  
+      Química del sustrato  
+      Análisis nutricionales  
+      Control fitosanitario  
+      Monitoreo de plagas y enfermedades  
+      Nuestro compromiso  
+      Desde nuestros inicios en 2020, mantenemos firme nuestro propósito: hacer agricultura de precisión.
+    </div>
+  </div>
+
+  <div class="fila-productos anim-scroll">
+    <div class="text animate-right">
+      Riego tecnificado: adaptado a las condiciones precisas de cada lote y etapa fenológica.  
+      Nutrición vegetal basada en evidencia: con planes ajustados según análisis foliares y del sustrato.  
+      Seguimiento técnico-analítico continuo:  
+      Química del sustrato  
+      Análisis nutricionales  
+      Control fitosanitario  
+      Monitoreo de plagas y enfermedades  
+      Nuestro compromiso  
+      Desde nuestros inicios en 2020, mantenemos firme nuestro propósito: hacer agricultura de precisión.
+    </div>
+    <img src="img/foto1.jpeg" alt="" class="animate-left animate-scale-left" />
+    <div class="text animate-right">
+      Riego tecnificado: adaptado a las condiciones precisas de cada lote y etapa fenológica.  
+      Nutrición vegetal basada en evidencia: con planes ajustados según análisis foliares y del sustrato.  
+      Seguimiento técnico-analítico continuo:  
+      Química del sustrato  
+      Análisis nutricionales  
+      Control fitosanitario  
+      Monitoreo de plagas y enfermedades  
+      Nuestro compromiso  
+      Desde nuestros inicios en 2020, mantenemos firme nuestro propósito: hacer agricultura de precisión.
+    </div>
+  </div>
+
+  <div class="fila-productos anim-scroll">
+    <div class="text animate-right">
+      Riego tecnificado: adaptado a las condiciones precisas de cada lote y etapa fenológica.  
+      Nutrición vegetal basada en evidencia: con planes ajustados según análisis foliares y del sustrato.  
+      Seguimiento técnico-analítico continuo:  
+      Química del sustrato  
+      Análisis nutricionales  
+      Control fitosanitario  
+      Monitoreo de plagas y enfermedades  
+      Nuestro compromiso  
+      Desde nuestros inicios en 2020, mantenemos firme nuestro propósito: hacer agricultura de precisión.
+    </div>
+    <img src="img/foto2.jpeg" alt="" class="animate-left animate-scale-left" />
+    <div class="text animate-right">
+      Riego tecnificado: adaptado a las condiciones precisas de cada lote y etapa fenológica.  
+      Nutrición vegetal basada en evidencia: con planes ajustados según análisis foliares y del sustrato.  
+      Seguimiento técnico-analítico continuo:  
+      Química del sustrato  
+      Análisis nutricionales  
+      Control fitosanitario  
+      Monitoreo de plagas y enfermedades  
+      Nuestro compromiso  
+      Desde nuestros inicios en 2020, mantenemos firme nuestro propósito: hacer agricultura de precisión.
+    </div>
+  </div>
+</section>
+
+
+  <!-- Sección Contacto -->
+  <!-- Contacto -->
+<section id="contacto" class="section contacto-section">
+  <h1>Contacto</h1>
+
+  <div class="contacto-container anim-scroll">
+    <form class="formulario-contacto">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" required />
+
+      <label for="correo">Correo:</label>
+      <input type="email" id="correo" name="correo" required />
+
+      <label for="mensaje">Mensaje:</label>
+      <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+
+      <button type="submit">Enviar</button>
+    </form>
+
+    <div class="contacto-info">
+      <p><strong>Domicilio:</strong> Jr. Cruz del Sur N° 140, Int 905, urb. Los Granados, Santiago de Surco, Lima-Perú</p>
+      <p><strong>Teléfonos:</strong> (01) 123-4567 / 987-654-321</p>
+      <p><strong>Correos:</strong><br>
+        <a href="mailto:administracion@grupotrebol.pe">administracion@grupotrebol.pe</a><br>
+        <a href="mailto:gestionhumana@grupotrebol.pe">gestionhumana@grupotrebol.pe</a>
+      </p>
+      <p><strong>Redes sociales:</strong><br>
+        <a href="https://www.facebook.com/profile.php?id=61572068584467&sk=about" target="_blank" class="icono-facebook" aria-label="Facebook">
+          <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" />
+        </a>
+      </p>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Footer -->
+  <footer class="footer">
+  <div class="footer-contenido">
+    <div class="footer-izquierda">
+      <p><strong>Domicilio:</strong> Jr. Cruz del Sur N° 140, Int 905, urb. Los Granados, Santiago de Surco, Lima-Perú.</p>
+      <p><strong>Grupo Trébol S.A.C</strong> | Correos: 
+        <a href="mailto:administracion@grupotrebol.pe">administracion@grupotrebol.pe</a> – 
+        <a href="mailto:gestionhumana@grupotrebol.pe">gestionhumana@grupotrebol.pe</a>
+      </p>
+    </div>
+    <div class="footer-derecha">
+      <a href="https://www.facebook.com/profile.php?id=61572068584467&sk=about" target="_blank" class="icono-facebook" aria-label="Facebook">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" />
+      </a>
+    </div>
+  </div>
+  </footer>
+
+<script type="module" src="/src/main.js"></script>
+
+</body>
+</html>
